@@ -67,7 +67,7 @@ return require("packer").startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-	use("kdheepak/lazygit.nvim")
+	use("kdheepak/lazygit.nvim") -- Lazygit plugin for vim
 	use("Pocco81/auto-save.nvim") -- Autosaves files on exiting insert
 	use("Pocco81/true-zen.nvim") -- Autosaves files on exiting insert
 	use("jose-elias-alvarez/typescript.nvim") -- Fixes tsserver issues
@@ -87,6 +87,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp") -- LSP completion for cmp
+	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }) -- Tabnine Support for nvim
 
 	--Snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine

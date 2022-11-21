@@ -31,5 +31,12 @@
       "export default Component;"
     ],
     "description": "React Native Functional Component"
+  },
+  "Console Log": {
+    "prefix": "cl",
+    "body": [
+      "console.log();"
+    ],
+    "description": "Console Log"
   }
 }

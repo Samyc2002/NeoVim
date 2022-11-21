@@ -81,7 +81,21 @@ cmp.setup({
 				luasnip = "ﬥ",
 				buffer = "﬘",
 				path = "",
+				cmp_tabinine = "",
 			})[entry.source.name]
+			if entry.source.name == "cmp_tabnine" then
+				local detail = (entry.completion_item.data or {}).detail
+				vim_item.kind = ""
+				if detail and detail:find(".*%%.*") then
+					vim_item.kind = vim_item.kind .. " " .. detail
+				end
+
+				if (entry.completion_item.data or {}).multiline then
+					vim_item.kind = vim_item.kind .. " " .. "[ML]"
+				end
+			end
+			local maxwidth = 80
+			vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
 			return vim_item
 		end,
 	},
@@ -90,6 +104,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "cmp_tabnine" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
@@ -104,7 +119,21 @@ cmp.setup({
 		},
 	},
 	experimental = {
-		ghost_text = false,
+		ghost_text = true,
 		native_menu = false,
+	},
+	sorting = {
+		priority_weight = 2,
+		comparators = {
+			require("cmp_tabnine.compare"),
+			cmp.config.compare.offset,
+			cmp.config.compare.exact,
+			cmp.config.compare.score,
+			cmp.config.compare.recently_used,
+			cmp.config.compare.kind,
+			cmp.config.compare.sort_text,
+			cmp.config.compare.length,
+			cmp.config.compare.order,
+		},
 	},
 })
