@@ -57,10 +57,10 @@ local mappings = {
 
   z = {
     name = "Zen Mode",
-    n = { "<cmd>TZNarrowcr>", "Toggle Narrow mode" },
-    f = { "<cmd>TZFocuscr>", "Toggle Focus mode" },
-    m = { "<cmd>TZMinimalistcr>", "Toggle Minimal Mode" },
-    a = { "<cmd>TZAtaraxiscr>", "Toggle True Zen Mode" },
+    n = { "<cmd>TZNarrow<cr>", "Toggle Narrow mode" },
+    f = { "<cmd>TZFocus<cr>", "Toggle Focus mode" },
+    m = { "<cmd>TZMinimalist<cr>", "Toggle Minimal Mode" },
+    a = { "<cmd>TZAtaraxis<cr>", "Toggle True Zen Mode" },
   },
 
   g = {

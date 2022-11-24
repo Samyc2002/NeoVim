@@ -1,5 +1,5 @@
 -- Load Nvim Faster
-require("impatient")
+pcall(require, "impatient")
 
 local options = {
 	backup = false,

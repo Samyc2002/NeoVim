@@ -5,7 +5,7 @@ saga.init_lsp_saga({
 	-- your configuration
 	-- Options with default value
 	-- "single" | "double" | "rounded" | "bold" | "plus"
-	border_style = "single",
+	border_style = "rounded",
 	--the range of 0 for fully opaque window (disabled) to 100 for fully
 	--transparent background. Values between 0-30 are typically most useful.
 	saga_winblend = 0,
@@ -75,7 +75,7 @@ saga.init_lsp_saga({
 	symbol_in_winbar = {
 		in_custom = false,
 		enable = true,
-		separator = " ",
+		separator = "  ",
 		show_file = true,
 		-- define how to customize filename, eg: %:., %
 		-- if not set, use default value `%:t`
