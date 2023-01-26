@@ -42,7 +42,7 @@ return require("packer").startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }) -- Shows a cool looking tabline (shows me tabs basically)
 	use("lewis6991/impatient.nvim") -- Hayaku
 	use("wakatime/vim-wakatime") -- Makes you Productive (by showing you how productive you are)
-	use("machakann/vim-highlightedyank") -- Highlight text being copied
+	--[[ use("machakann/vim-highlightedyank") -- Highlight text being copied ]]
 	use("ryanoasis/vim-devicons") -- Adds more icons
 	use({ "folke/which-key.nvim" }) -- Autosuggests commands to me (yeah I forget em)
 	use("nvim-zh/colorful-winsep.nvim") -- Make active window (or rather the split) colorful
@@ -52,6 +52,8 @@ return require("packer").startup(function(use)
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	}) -- The usual trouble maker
+	use("Xuyuanp/scrollbar.nvim") -- Scroll bar for added fun.
+	--[[ use({ "X3eRo0/dired.nvim", requires = "MunifTanjim/nui.nvim" }) -- Dired File manager for neovim ]]
 
 	--Programming
 	use("windwp/nvim-autopairs") -- Autocompletes parentheses and quotes cuz I'm lazy
@@ -70,7 +72,7 @@ return require("packer").startup(function(use)
 		run = function()
 			vim.fn["mkdp#util#install"]()
 		end,
-	}) -- Proviews markdown (yeah an illegal move, I know)
+	}) -- Previews markdown (yeah an illegal move, I know)
 	use("kdheepak/lazygit.nvim") -- Lazygit plugin for lazy people like me
 	use("Pocco81/auto-save.nvim") -- Autosaves files on exiting insert (again for lazy people)
 	use("Pocco81/true-zen.nvim") -- Takes you to that productive mode where you can do anything
@@ -79,7 +81,7 @@ return require("packer").startup(function(use)
 	use("nvim-pack/nvim-spectre") -- Search and Replace in project (yeah it can even compare to vscode)
 
 	--Treesitter
-	use("nvim-treesitter/nvim-treesitter") --Syntax highlighting to make nvim better
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" }) --Syntax highlighting to make nvim better
 	use("p00f/nvim-ts-rainbow") -- Colours the nested brackets with different colours similar to what vscode does
 
 	-- Telescope

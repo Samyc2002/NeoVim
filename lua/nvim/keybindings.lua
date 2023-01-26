@@ -21,6 +21,10 @@ vim.g.maplocalleader = " "
 local keybinds = {
   -- Normal --
   n = {
+    -- Better file navigation
+    {binding = "<C-d>", actual = "<C-d>zz"},
+    {binding = "<C-u>", actual = "<C-u>zz"},
+
     -- Better window navigation
     { binding = "<C-h>", actual = "<C-w>h" },
     { binding = "<C-j>", actual = "<C-w>j" },
@@ -75,7 +79,7 @@ local keybinds = {
     { binding = "<leader>rr", actual = ":Telescope oldfiles <CR>" },
     { binding = "<leader>rc", actual = ":so %<CR>" },
     { binding = "<leader>pd", actual = ":e ~/Projects/ <CR>" },
-    { binding = "<leader>ps", actual = ":e ~/Projects/react-n-ftend/ <CR>" },
+    { binding = "<leader>ps", actual = ":e ~/Projects/shram/ <CR>" },
     --[[ { binding = "<leader>n", actual = ":NvimTreeToggle ~/Documents <CR>" }, ]]
     --[[ { binding = "<leader>ni", actual = ":e ~/Documents/Ideas.md <CR>" }, ]]
     --[[ { binding = "<leader>nn", actual = ":e ~/Documents/Notes.md <CR>" }, ]]

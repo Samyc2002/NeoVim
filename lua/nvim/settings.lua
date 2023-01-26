@@ -35,10 +35,10 @@ local options = {
 	wrap = false,
 	scrolloff = 8,
 	sidescrolloff = 8,
-	guifont = "JetBrainsMono Nerd Font:h11",
+	guifont = "JetBrainsMono Nerd Font:h10",
 	fillchars = "vert:│",
 	laststatus = 3,
-	linespace = 3,
+	--[[ linespace = 3, ]]
 }
 
 vim.opt.shortmess:append("c")

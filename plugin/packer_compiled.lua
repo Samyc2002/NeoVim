@@ -339,6 +339,11 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["scrollbar.nvim"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/scrollbar.nvim",
+    url = "https://github.com/Xuyuanp/scrollbar.nvim"
+  },
   ["silicon.nvim"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/silicon.nvim",
@@ -416,11 +421,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
-  },
-  ["vim-highlightedyank"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
-    url = "https://github.com/machakann/vim-highlightedyank"
   },
   ["vim-illuminate"] = {
     loaded = true,

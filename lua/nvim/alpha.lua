@@ -30,7 +30,7 @@ dashboard.section.buttons.val = {
   dashboard.button("SPC d", "  Documents", ":e ~/Documents/ <CR>"),
   dashboard.button("SPC p", "  Development", ":e ~/Projects/ <CR>"),
   dashboard.button("SPC p d", "       Projects", ":e ~/Projects/ <CR>"),
-  dashboard.button("SPC p s", "       Shram", ":e ~/Projects/react-n-ftend/ <CR>"),
+  dashboard.button("SPC p s", "       Shram", ":e ~/Projects/shram/ <CR>"),
   dashboard.button("SPC n", "  Notes", ":NvimTreeToggle ~/Documents <CR>"),
   dashboard.button("SPC n i", "       Random Ideas", ":e ~/Documents/Ideas.md <CR>"),
   dashboard.button("SPC n n", "       Quick Notes", ":e ~/Documents/Notes.md <CR>"),
