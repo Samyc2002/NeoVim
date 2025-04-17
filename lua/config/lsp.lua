@@ -4,7 +4,7 @@ local cmp_lsp = require("cmp_nvim_lsp")
 lsp_zero.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
-    if client.name == "tsserver" then
+    if client.name == "ts_ls" then
         client.server_capabilities.document_formatting = false
     end
     lsp_zero.default_keymaps({ buffer = bufnr })
@@ -23,7 +23,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
         "lua_ls",
-        "tsserver",
+        "ts_ls",
         "eslint",
         "rust_analyzer"
     },

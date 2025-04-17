@@ -27,7 +27,7 @@ keymap.set("v", "<leader>d", "\"_d")
 
 -- More life enhancement Keybindings
 keymap.set("n", "Q", "<nop>")
-keymap.set("n", "<leader>f", function ()
+keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format({ async = true })
 end)
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -40,3 +40,12 @@ keymap.set("n", "<C-j>", "<cmd>cnext<CR>", { silent = true })
 keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", { silent = true })
 keymap.set("n", "<leader>bb", "<cmd>bnext<CR>", { silent = true })
 keymap.set("n", "<leader>bB", "<cmd>bprev<CR>", { silent = true })
+
+-- Keybindings for some bloat
+keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { silent = true })
+keymap.set("n", "<F2>", "<cmd>Lspsaga rename<CR>", { silent = true })
+keymap.set("n", "gr", "<cmd>Lspsaga finder<CR>", { silent = true })
+keymap.set("n", "L", "<cmd>Lspsaga code_action<CR>", { silent = true })
+keymap.set("n", "<leader>h", "<cmd>Lspsaga outgoing_calls<CR>", { silent = true })
+keymap.set("n", "<leader>H", "<cmd>Lspsaga incoming_calls<CR>", { silent = true })
+keymap.set("n", "<leader>T", "<cmd>Twilight<CR>", { silent = true })
