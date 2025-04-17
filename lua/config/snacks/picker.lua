@@ -1,6 +1,5 @@
 local M = {
-	opts = {
-		enabled = true,
+	styles = {
 		layout = {
 			cycle = true,
 			preset = "vertical"

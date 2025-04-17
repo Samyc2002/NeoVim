@@ -1,4 +1,5 @@
-local COLORSCHEME = "catppuccin-mocha"
+-- local COLORSCHEME = "catppuccin-mocha"
+local COLORSCHEME = ""
 
 local ui_opts = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -45,6 +46,8 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
+    import = "config.plugins"
+}, {
     spec = require("config.plugins"),
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.

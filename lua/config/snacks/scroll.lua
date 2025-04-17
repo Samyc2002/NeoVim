@@ -1,6 +1,5 @@
 local M = {
-	opts = {
-		enabled = true,
+	styles = {
 		animate = {
 			duration = { step = 15, total = 250 },
 			easing = "inOutSine",

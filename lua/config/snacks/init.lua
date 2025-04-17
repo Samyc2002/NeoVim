@@ -1,25 +1,36 @@
 local M = {}
 
+-- Common table to enable features in snacks
+local enable = { enabled = true }
+
+-- Enable featuers and stylize them here
 M.opts = {
-	-- your configuration comes here
-	-- or leave it empty to use the default settings
-	-- refer to the configuration section below
-	dim = require("config.snacks.dim").opts,
+	-- Configurations for snacks
+	dim = enable,
 	notifier = require("config.snacks.notifier").opts,
-	bigfile = { enabled = true },
-	explorer = { enabled = true },
-	indent = { enabled = true },
+	bigfile = enable,
+	explorer = enable,
+	indent = enable,
 	input = require("config.snacks.input").opts,
-	picker = require("config.snacks.picker").opts,
-	quickfile = { enabled = true },
-	scope = { enabled = true },
-	scroll = require("config.snacks.scroll").opts,
-	statuscolumn = { enabled = true },
-	words = { enabled = true },
-	terminal = { enabled = true },
-	zen = { enabled = true },
+	picker = enable,
+	quickfile = enable,
+	scope = enable,
+	scroll = enable,
+	statuscolumn = enable,
+	words = enable,
+	terminal = enable,
+	zen = enable,
+	-- Styles for different snacks
+	styles = {
+		dim = require("config.snacks.dim").styles,
+		input = require("config.snacks.input").styles,
+		picker = require("config.snacks.picker").styles,
+		scroll = require("config.snacks.scroll").styles,
+		terminal = require("config.snacks.terminal").styles,
+	}
 }
 
+-- Add keybindings to snacks
 M.keys = {
 	-- Explorer stuff
 	{ "<leader>pf",      function() Snacks.picker.files() end,          desc = "Find Files" },
@@ -32,7 +43,7 @@ M.keys = {
 	{ "<leader>z",       function() Snacks.zen() end,                   desc = "Toggle Zen Mode" },
 	{ "<leader>Z",       function() Snacks.zen.zoom() end,              desc = "Toggle Zoom" },
 	-- Terminal
-	{ "<c-/>",           function() Snacks.terminal() end,              desc = "Toggle Terminal" },
+	{ "<leader>`",       function() Snacks.terminal() end,              desc = "Toggle Terminal" },
 	-- Notifs
 	{ "<leader>n",       function() Snacks.notifier.show_history() end, desc = "Notification History" },
 	{ "<leader>nn",      function() Snacks.notifier.hide() end,         desc = "Dismiss All Notifications" },
@@ -70,6 +81,7 @@ M.init = function()
 	})
 end
 
+-- Integrate snacks to other plugins
 M.others = {}
 
 M.others.trouble = {

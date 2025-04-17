@@ -30,7 +30,7 @@ local plugins = {
 		dependencies = {
 			"sindrets/diffview.nvim", -- optional - Diff integration
 			-- Only one of these is needed, not both.
-			"ibhagwan/fzf-lua",       -- optional
+			"ibhagwan/fzf-lua", -- optional
 		},
 		config = true
 	},
@@ -76,7 +76,7 @@ local plugins = {
 		config = require("config.lspsaga").config,
 		dependencies = {
 			'nvim-treesitter/nvim-treesitter', -- optional
-			'nvim-tree/nvim-web-devicons',     -- optional
+			'nvim-tree/nvim-web-devicons', -- optional
 		}
 	},
 	-- Optional
@@ -97,8 +97,13 @@ local plugins = {
 			require('mini.ai').setup { n_lines = 500 }
 			require('mini.surround').setup()
 			require('mini.starter').setup(opts.starter)
-			require("mini.map").setup()
 		end,
+	},
+	{
+		"folke/edgy.nvim",
+		---@module 'edgy'
+		---@param opts Edgy.Config
+		opts = require("config.edgy").opts,
 	},
 	{
 		"folke/snacks.nvim",
@@ -123,7 +128,7 @@ local plugins = {
 	},
 	'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
 	'JoosepAlviste/nvim-ts-context-commentstring',
-	'tpope/vim-sleuth',      -- Detect tabstop and shiftwidth automatically
+	'tpope/vim-sleuth',   -- Detect tabstop and shiftwidth automatically
 	'ap/vim-css-color',
 	'alvan/vim-closetag',
 	'p00f/nvim-ts-rainbow',

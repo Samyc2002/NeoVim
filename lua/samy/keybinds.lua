@@ -2,8 +2,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
--- keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- VS Code style shifting
 keymap.set("v", "J", ":m '>=1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -48,4 +46,3 @@ keymap.set("n", "gr", "<cmd>Lspsaga finder<CR>", { silent = true })
 keymap.set("n", "L", "<cmd>Lspsaga code_action<CR>", { silent = true })
 keymap.set("n", "<leader>h", "<cmd>Lspsaga outgoing_calls<CR>", { silent = true })
 keymap.set("n", "<leader>H", "<cmd>Lspsaga incoming_calls<CR>", { silent = true })
-keymap.set("n", "<leader>T", "<cmd>Twilight<CR>", { silent = true })

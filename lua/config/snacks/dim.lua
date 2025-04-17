@@ -1,6 +1,5 @@
 local M = {
-	opts = {
-		enabled = true,
+	styles = {
 		scope = {
 			min_size = 5,
 			max_size = 20,
