@@ -1,5 +1,4 @@
--- local COLORSCHEME = "catppuccin-mocha"
-local COLORSCHEME = ""
+local COLORSCHEME = "catppuccin-mocha"
 
 local ui_opts = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

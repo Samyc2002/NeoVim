@@ -11,7 +11,6 @@ M.opts = {
 	bigfile = enable,
 	explorer = enable,
 	indent = enable,
-	input = require("config.snacks.input").opts,
 	picker = enable,
 	quickfile = enable,
 	scope = enable,
@@ -23,7 +22,6 @@ M.opts = {
 	-- Styles for different snacks
 	styles = {
 		dim = require("config.snacks.dim").styles,
-		input = require("config.snacks.input").styles,
 		picker = require("config.snacks.picker").styles,
 		scroll = require("config.snacks.scroll").styles,
 		terminal = require("config.snacks.terminal").styles,
